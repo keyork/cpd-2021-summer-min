@@ -119,7 +119,7 @@ class HangmanGamer:
             self.ui_interface["wrong_step"] += 1
 
             print("".join(self.guess))
-            if self.wrong_step == 7:
+            if self.wrong_step == 6:
                 self.done = True
                 LOGGER.error("你输了")
                 LOGGER.error("正确答案: {}".format(self.word))
