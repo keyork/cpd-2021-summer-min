@@ -17,9 +17,6 @@ class Ui_MainWindow(object):
         MainWindow.resize(810, 595)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.titleBrowser = QtWidgets.QTextBrowser(self.centralwidget)
-        self.titleBrowser.setGeometry(QtCore.QRect(250, 10, 341, 61))
-        self.titleBrowser.setObjectName("titleBrowser")
         self.timeLabel = QtWidgets.QLabel(self.centralwidget)
         self.timeLabel.setGeometry(QtCore.QRect(440, 180, 71, 51))
         self.timeLabel.setObjectName("timeLabel")
@@ -58,7 +55,9 @@ class Ui_MainWindow(object):
         self.answerLabel.setGeometry(QtCore.QRect(190, 130, 561, 41))
         self.answerLabel.setText("")
         self.answerLabel.setObjectName("answerLabel")
-        self.titleBrowser.raise_()
+        self.titleLabel = QtWidgets.QLabel(self.centralwidget)
+        self.titleLabel.setGeometry(QtCore.QRect(250, 10, 341, 61))
+        self.titleLabel.setObjectName("titleLabel")
         self.timeLabel.raise_()
         self.timeLcd.raise_()
         self.confirmButton.raise_()
@@ -71,6 +70,7 @@ class Ui_MainWindow(object):
         self.infoLabel.raise_()
         self.answerLabel.raise_()
         self.judgeLabel.raise_()
+        self.titleLabel.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 810, 22))
@@ -87,11 +87,6 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.titleBrowser.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'.AppleSystemUIFont\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:36pt; font-weight:600;\">Hangman 单人模式</span></p></body></html>"))
         self.timeLabel.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:24pt;\">时间</span></p></body></html>"))
         self.confirmButton.setText(_translate("MainWindow", "确认"))
         self.exitButton.setText(_translate("MainWindow", "退出"))
@@ -104,3 +99,4 @@ class Ui_MainWindow(object):
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:24pt;\"> </span></p></body></html>"))
         self.resultLabel.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:24pt;\">结果</span></p></body></html>"))
         self.judgeLabel.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><br/></p></body></html>"))
+        self.titleLabel.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:36pt; font-weight:600;\">Hangman 单人模式</span></p></body></html>"))
