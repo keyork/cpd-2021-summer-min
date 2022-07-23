@@ -131,3 +131,5 @@ dmypy.json
 .vscode/
 
 hangman/commu/nohup.out
+
+.qt_for_python/
